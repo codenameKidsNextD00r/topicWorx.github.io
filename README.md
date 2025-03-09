@@ -1,7 +1,7 @@
 # COVID-19 Data Visualization
 
 This project visualizes COVID-19 data using a line chart. It allows users to filter the data by date range and view trends in Total Confirmed Cases, Active Cases, Total Deaths, and Total Recovered.
-[Live Demo available here:](https://codenamekidsnextd00r.github.io/topicWorx.github.io/)
+[Click here to view live demo](https://codenamekidsnextd00r.github.io/topicWorx.github.io/)
 
 ## Features
 - **Interactive Line Chart**: Visualizes COVID-19 data over time.
@@ -38,6 +38,7 @@ This project visualizes COVID-19 data using a line chart. It allows users to fil
 - **Fetching Data**: The `fetchData()` function fetches the COVID-19 data from the `covid.json` file.
 - **Filtering Data**: The `filterData()` function filters the data based on the selected date range.
 - **Rendering the Chart**: The `renderChart()` function uses Chart.js to render the line chart. It updates the chart dynamically when the date range is changed.
+- **Date Formatting**: To enable filtering, the date date types from the form (ISO date format) had to be converted to match the date formatting provided in the JSON file
 
 ### Styling
 - Bootstrap is used for styling the form, buttons, and layout.

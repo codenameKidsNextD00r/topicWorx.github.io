@@ -13,15 +13,11 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">COVID-19 Data Visualization</a>
-        </div>
-    </nav>
 
     <div id="main-container" class="container mt-5">
         <div id="form-container" class="card p-4 mb-4 shadow-sm">
-            <h2 class="mb-4">Filter COVID-19 Data</h2>
+            <h2 class="mb-4 text-center">Filter Data</h2>
+            <p class="mb-4 text-center">Note: The data set only includes data from <strong>2020/03/05</strong> to <strong>2020/06/12<strong></p>
             <form id="filter-form">
                 <div class="row g-3">
                     <div class="col-md-5">
@@ -40,7 +36,7 @@
         </div>
         
         <div id="chart-area" class="card p-4 shadow-sm">
-            <h2 class="mb-4">COVID-19 Data</h2>
+            <h2 class="mb-4 text-center">COVID-19 Data</h2>
             <canvas id="chart"></canvas>
         </div>
     </div>
@@ -121,6 +117,14 @@
                     responsive: true,
                     scales: {
                         y: { beginAtZero: true }
+                    },
+                    interaction: {mode: 'index'},
+                    plugins:{
+                        legend: {
+                            onHover: function(event){
+                                event.native.target.style.cursor = 'pointer';
+                            }
+                        }
                     }
                 }
             });
